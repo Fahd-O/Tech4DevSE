@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    
+<head>
+    <title>My CSS Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+    <nav>
+        <ul class="topnav" id="dropdownClick">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="topnav-right"><a href="#signup">Sign Up</a></li>
+            <li class="topnav-right"><a href="#signin">Sign In</a></li>
+            <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container section-1-gradient">
+        <div class="row">
+            <div class="col-6">
+                <div class="leftSide-col">
+                    <div>
+                        <h1 class="largerText">Create new admin</h1>
+                        <h1 class="largerText">profile here...</h1>
+                    </div>
+                    <form>
+                        <div>
+                            <h2>Username</h2>
+                            <input class="inputbox" name="username" type="text" placeholder="Username">
+                            <h2>Password</h2>
+                            <input class="inputbox" name="password" type="password" placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="rightSide-col">
+                    <div class="videoContainer">
+                        <iframe width="560" height="315" style="border-radius: 15px" src="https://www.youtube.com/embed/-CJ1-aKYb2U?si=zaq27qgu62CVHZoK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="section2Header">The Standards of Awesome</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+                        <img src="devslopesIcon.png">
+                    </div>
+                    <label>Solve a Problem</label>
+                    <p>Identify pressing problems in the society and world at large. Are people ready to pay for a solution to this problem(s) ? Create a revenue generation plan !</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+                        <img src="devslopesIcon.png">
+                    </div>
+                    <label>Get Resources</label>
+                    <p>Earn and gather resources from the problem(s) solved. Resources ain't just money and physical assets, it could also be information and connections</p>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="box">
+                    <div class="icon">
+                        <img src="devslopesIcon.png">
+                    </div>
+                    <label>Make Impact</label>
+                    <p>Make positive impact in the immediate and distant community, change the world, establish the path, have a say in the society, Make the difference.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button class="learnMore">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                <article>
+                    <p>
+                        These are sample text for this article. Thinkers are Inventers. Make the world a better place for all the creatures of the earth. Get value for your organization as well develop software solutions to solve your pressing problems, or simply just make life easier !
+                    </p>
+                </article>
+            </div>
+            <div class="col-5">
+                <div class="slopeIcon">
+                    <img src="iOS-Slope.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="endOfTheLine">
+        <div class="row">
+            <div class="col-3 mobileStack">
+                <h1>Company</h1>
+                <ul>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Career</li>
+                </ul>
+            </div>
+            <div class="col-3 mobileStack">
+                <h1>Products</h1>
+                <ul>
+                    <li>Computers</li>
+                    <li>iPads</li>
+                    <li>iPhones</li>
+                </ul>
+            </div>
+            <div class="col-3 mobileStack">
+                <h1>Learn More</h1>
+                <ul>
+                    <li>Developers</li>
+                    <li>Designers</li>
+                    <li>Hackers</li>
+                </ul>
+            </div>
+            <div class="col-3 mobileStack">
+                <h1>Support</h1>
+                <ul>
+                    <li>Help</li>
+                    <li>FAQ</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    <script>
+        function dropdownMenu()
+        {
+            var x = document.getElementById("dropdownClick");
+            if (x.className === "topnav")
+                {
+                    x.className += " responsive";
+//                    This changes the name of the 'topnav' class to 'topnav responsive' i.e it now gives it two class names.
+                }
+            else
+                {
+                    x.className = "topnav";
+                }
+        }
+    </script>
+    
+</body>
+    
+</html>
