@@ -59,3 +59,20 @@ else
     {
         console.log("The values may be the same, but their types are different");
     }
+//
+//
+//
+var students = ["Faiz", "Bayo", "Ngozi"];
+
+var whiteList = ["Bello", "chibuzor", "Fatimah"];
+
+whiteList.push(students[2]);
+
+console.log(whiteList);
+
+var index = whiteList.indexOf("chibuzor");
+if (index > -1)
+    {
+        whiteList.splice(index,index); //this removes just one student.
+        console.log(whiteList);
+    }
