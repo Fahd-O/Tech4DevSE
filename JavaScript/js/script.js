@@ -76,3 +76,13 @@ if (index > -1)
         whiteList.splice(index,index); //this removes just one student.
         console.log(whiteList);
     }
+
+
+
+var fruits = ['mango', 'banana', 'dates', 'watermelon', 'pineapple', 'orange', 'apple', 'pomergranates', 'zabeeb'];
+console.log(fruits);
+
+for (var i = 0; i < fruits.length; i++)
+    {
+        console.log(i + ". " + fruits[i]);
+    }
