@@ -61,7 +61,7 @@ else
     }
 //
 //
-//
+//Array
 var students = ["Faiz", "Bayo", "Ngozi"];
 
 var whiteList = ["Bello", "chibuzor", "Fatimah"];
@@ -86,3 +86,30 @@ for (var i = 0; i < fruits.length; i++)
     {
         console.log(i + ". " + fruits[i]);
     }
+
+
+
+console.log("");
+//Functions Functions Functions Functions
+console.log("----- Function Outputs begins here -----");
+
+bankBalance = 500;
+
+function confirmPayment(productPrice)
+{
+    if (productPrice <= bankBalance)
+        {
+            bankBalance -= productPrice;
+            console.log("Payment Successful !" + " Account Balance is: $" + bankBalance);
+        }
+    else
+        {
+            console.log("Insufficient Balance !" + " Account Balance is: $" + bankBalance);
+        }
+}
+
+confirmPayment(139);
+confirmPayment(200);
+confirmPayment(250);
+
+//functions can also be put inside a variable if need be.
