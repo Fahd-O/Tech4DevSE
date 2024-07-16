@@ -113,3 +113,8 @@ confirmPayment(200);
 confirmPayment(250);
 
 //functions can also be put inside a variable if need be.
+
+
+
+// JavaScript Objects
+
