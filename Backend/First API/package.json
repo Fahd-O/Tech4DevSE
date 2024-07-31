@@ -1,0 +1,15 @@
+{
+  "name": "1st-api",
+  "version": "1.0.0",
+  "description": "This is supposed to be my first API created during a tutorial course for SE. Don't know the importance of this yet... just following along for now.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Abiola Fahad Ogunnaike",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
