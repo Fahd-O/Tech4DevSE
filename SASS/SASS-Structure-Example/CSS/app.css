@@ -1,3 +1,8 @@
+body {
+  width: 100%;
+  padding: 40px 50px;
+}
+
 #header {
   padding: 20px;
   width: 100%;
@@ -23,11 +28,6 @@
 .main-nav {
   background-color: grey;
   border: 1px solid black;
-}
-
-body {
-  width: 100%;
-  padding: 40px 50px;
 }
 
 /*# sourceMappingURL=app.css.map */
