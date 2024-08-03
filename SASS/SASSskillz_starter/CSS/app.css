@@ -52,4 +52,16 @@ h1 {
   color: red;
 }
 
+.pro-img {
+  box-shadow: 0 0 15px #555;
+  border: 1px solid #00AA8D;
+  border-radius: 5px;
+  background-color: #00AA8D;
+  width: 22%;
+  height: 120px;
+  display: inline-block;
+  float: left;
+  margin: 15px;
+}
+
 /*# sourceMappingURL=app.css.map */
