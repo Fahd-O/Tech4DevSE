@@ -64,4 +64,24 @@ h1 {
   margin: 15px;
 }
 
+.alert, .oh-dang, .warning, .success {
+  border: 1px solid #333;
+  margin: 10px 0;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.success {
+  background: #4caf50;
+}
+
+.warning {
+  background: #fc3;
+}
+
+.oh-dang {
+  background: red;
+}
+
 /*# sourceMappingURL=app.css.map */
