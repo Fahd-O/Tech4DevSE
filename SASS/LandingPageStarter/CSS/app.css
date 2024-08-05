@@ -1,87 +1,110 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  color: #eee;
-  font-family: Georgia, Times, Serif;
-}
-
-#header {
-  text-align: center;
-  display: block;
+.row {
+  display: flex;
   width: 100%;
-  background-color: #008975;
-}
-#header h1 {
-  margin: 0;
-  padding: 10px 0;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-#main-content {
+.row::after {
+  display: table;
+  clear: both;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
   width: 100%;
-  padding: 20px 30px;
+}
+
+* {
   box-sizing: border-box;
-  display: inline-block;
-  background-color: #eee;
 }
 
-#main-nav {
-  background-color: #00AA8D;
-  width: 100%;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
   display: block;
-  padding: 10px 0 40px;
-  border: 1px solid black;
 }
-#main-nav ul {
+
+.nav-header {
+  padding: 0 0 10px;
+  background-color: #fff;
+}
+.nav-header .container {
+  padding: 10px 15px 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-menu {
+  float: right;
+  margin: 5px 0 0;
+}
+.nav-menu .nav-menu-list {
+  font-size: 1.25rem;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
 }
-#main-nav li {
-  float: left;
-  margin-left: 30px;
-}
-#main-nav li a {
-  text-decoration: none;
-  font-size: 22px;
-  color: #eee;
-}
-#main-nav li a:hover {
-  color: red;
-}
-
-.pro-img {
-  box-shadow: 0 0 15px #555;
-  border: 1px solid #00AA8D;
-  border-radius: 5px;
-  background-color: #00AA8D;
-  width: 22%;
-  height: 120px;
+.nav-menu .nav-menu-list .nav-item {
   display: inline-block;
-  float: left;
-  margin: 15px;
+  margin: 0;
+  vertical-align: top;
 }
-
-.alert, .oh-dang, .warning, .success {
-  border: 1px solid #333;
-  margin: 10px 0;
-  padding: 15px;
+.nav-menu .nav-menu-list .nav-item .nav-a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #212630;
+  border: 1px solid transparent;
   text-transform: uppercase;
-  border-radius: 10px;
 }
-
-.success {
-  background: #4caf50;
-}
-
-.warning {
-  background: #fc3;
-}
-
-.oh-dang {
-  background: red;
+.nav-menu .nav-menu-list .nav-item .nav-a:hover {
+  color: red;
 }
 
 /*# sourceMappingURL=app.css.map */
