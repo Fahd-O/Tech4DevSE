@@ -70,6 +70,46 @@
   display: block;
 }
 
+.banner-container {
+  padding: 40px 0;
+  background-color: #212630;
+  color: #fff;
+}
+
+.home-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: -50px 0 20px;
+  color: #cd4b3d;
+}
+
+.b-text {
+  font-size: 1.25rem;
+  margin: 0 0 20px;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  padding-right: 25px;
+  line-height: 1.7;
+}
+
+.b-card {
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  background-color: #212630;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-left: 50px;
+}
+.b-card .b-title {
+  font-size: 27px;
+  font-weight: 700;
+  color: #fffcfc;
+  margin: 0 0 15px;
+}
+.b-card .b-title .b-video {
+  margin: 0 auto 15px;
+}
+
 .nav-header {
   padding: 0 0 10px;
   background-color: #fff;
