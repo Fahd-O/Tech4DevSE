@@ -146,6 +146,28 @@ body {
   letter-spacing: -0.025em;
 }
 
+#page-footer {
+  clear: both;
+  background-color: #212630;
+  padding: 25px 0 40px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-container {
+  padding: 0 10%;
+}
+
+.footer-link {
+  margin-right: 36px;
+  color: #fffcfc;
+  text-decoration: none;
+}
+.footer-link:hover {
+  color: #cd4b3d;
+}
+
 .nav-header {
   padding: 0 0 10px;
   background-color: #fff;
