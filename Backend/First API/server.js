@@ -14,7 +14,7 @@ var awonEroja =
     
     {
         "id": "jva582",
-        "text": "Miliki"
+        "text": "Omi"
     },
     
     {
@@ -40,6 +40,27 @@ appi.get('/page2', function(request, response){
 appi.get('/ingredients', function(request, response){
     response.send(awonEroja);
 });
+
+appi.post
+(
+    '/ingredients',
+
+    function(request, response)
+    {
+        var alekun = request.body;
+        if (!alekun || alekun.text === "")
+        {
+            response.status(500).send({error: "Your ingredient addition must have text"});
+        }
+        else
+        {
+            awonEroja.push(alekun);
+            response.status(200).send(awonEroja);
+        }
+    }
+);
+
+
 
 appi.listen(3000, function()
 {
