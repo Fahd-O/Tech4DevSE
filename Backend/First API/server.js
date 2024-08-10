@@ -60,6 +60,26 @@ appi.post
     }
 );
 
+appi.put
+(
+    '/ingredients/:ingredientId',
+    function(request, response)
+    {
+        var ingredientId = request.params.ingredientId;
+        var ingredientText = request.body.text;
+
+        if(!(ingredientId || ingredientId === "") || (!ingredientText || ingredientText === ""))
+        {
+            
+        }
+
+        for(var x = 0; x < awonEroja.length; x++)
+            {
+
+            }
+    }
+);
+
 
 
 appi.listen(3000, function()
