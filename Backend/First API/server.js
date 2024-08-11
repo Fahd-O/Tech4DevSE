@@ -65,18 +65,20 @@ appi.put
     '/ingredients/:ingredientId',
     function(request, response)
     {
-        var ingredientId = request.params.ingredientId;
         var ingredientText = request.body.text;
 
-        if(!(ingredientId || ingredientId === "") || (!ingredientText || ingredientText === ""))
+        if(!ingredientText || ingredientText === "")
         {
-            
+            response.status(500).send({error:"You must provide ingredient text"})
+        }
+        else
+        {
+            for(var x = 0; x < awonEroja.length; x++)
+                {
+    
+                }
         }
 
-        for(var x = 0; x < awonEroja.length; x++)
-            {
-
-            }
     }
 );
 
