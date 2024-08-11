@@ -65,9 +65,9 @@ appi.put
     '/ingredients/:ingredientId',
     function(request, response)
     {
-        var ingredientText = request.body.text;
+        var newIngredientText = request.body.text;
 
-        if(!ingredientText || ingredientText === "")
+        if(!newIngredientText || newIngredientText === "")
         {
             response.status(500).send({error:"You must provide ingredient text"})
         }
@@ -75,8 +75,16 @@ appi.put
         {
             for(var x = 0; x < awonEroja.length; x++)
                 {
-    
+                    var eroja = awonEroja[x];
+
+                    if (eroja.id === request.params.ingredientId)
+                    {
+                        awonEroja[x].text = newIngredientText;
+                        break;
+                    }
                 }
+
+                response.send(awonEroja);
         }
 
     }
@@ -86,5 +94,5 @@ appi.put
 
 appi.listen(3000, function()
 {
-    console.log('1st API is running successfully !');
+    console.log('1st API is running successfully on port 3000 !');
 });
