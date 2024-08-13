@@ -73,6 +73,7 @@ appi.put
         }
         else
         {
+            var objectKeyFoundMsg = false;
             for(var x = 0; x < awonEroja.length; x++)
                 {
                     var eroja = awonEroja[x];
@@ -80,13 +81,20 @@ appi.put
                     if (eroja.id === request.params.ingredientId)
                     {
                         awonEroja[x].text = newIngredientText;
+                        objectKeyFoundMsg = true;
                         break;
                     }
                 }
 
-                response.send(awonEroja);
+                if(!objectKeyFoundMsg)
+                {
+                    response.status(500).send({error: "Ingredient Id was not found o"});
+                }
+                else
+                {
+                    response.send(awonEroja);
+                }
         }
-
     }
 );
 
@@ -94,5 +102,5 @@ appi.put
 
 appi.listen(3000, function()
 {
-    console.log('1st API is running successfully on port 3000 !');
+    console.log('1st API is running successfully on port 3000 ! You hear ?');
 });
