@@ -4,7 +4,7 @@ var variableForBodyParser = require('body-parser');
 var variableForMongoose = require('mongoose');
 var db = variableForMongoose.connect('mongodb://localhost/Shopping-Wishlist');
 
-var serverOja = require('./model/oja');
+var serverOja = require('./model/product');
 var Wishlist = require('./model/wishlist');
 
 serverApp.use(variableForBodyParser.json());
@@ -18,7 +18,19 @@ serverApp.post
         var postOja = new serverOja();
         postOja.title = request.body.title;
         postOja.price = request.body.price;
-        postOja.likes = 0;
+        postOja.save(
+                        function(err, savedProduct)
+                        {
+                            if(err)
+                            {
+                                response.status(500).send({error:"Could not save product, you hear"});
+                            }
+                            else
+                            {
+                                response.send(savedProduct);
+                            }
+                        }
+                    );
     }
 )
 
