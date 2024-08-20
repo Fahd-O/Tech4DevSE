@@ -5,7 +5,7 @@ var variableForMongoose = require('mongoose');
 var db = variableForMongoose.connect('mongodb://localhost/Shopping-Wishlist');
 
 var serverOja = require('./model/product');
-var Wishlist = require('./model/wishlist');
+var WishList = require('./model/wishlist');
 
 serverApp.use(variableForBodyParser.json());
 serverApp.use(variableForBodyParser.urlencoded({extended: false}));
