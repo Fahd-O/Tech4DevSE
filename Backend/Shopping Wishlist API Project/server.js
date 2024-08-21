@@ -34,6 +34,15 @@ serverApp.post
     }
 )
 
+serverApp.get
+(
+    '/products',
+    function(request, response)
+    {
+
+    }
+);
+
 serverApp.listen
 (
     3000,
