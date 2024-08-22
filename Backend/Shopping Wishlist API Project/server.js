@@ -39,7 +39,23 @@ serverApp.get
     '/products',
     function(request, response)
     {
+        product.find
+        (
+            {},
+            function(err, products)
+            {
+                if(err)
+                {
+                    response.status(500).send({error:"Could not fetch water from the well due to the traffic of the sunlight under the bucket"});
+                }
+                else
+                {
+                    response.send(products);
+                }
+            }
+        );
 
+        
     }
 );
 
