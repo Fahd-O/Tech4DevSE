@@ -1,2 +1,13 @@
-//An episode of the tutorial video is missing thus causing this file to be empty of codes.
-//The codes to be here seems to have been written in the missing episode.
+var wishlistMongoose =require('mongoose');
+var wishlistSchema = wishlistMongoose.Schema;
+var wishlistObjId = wishlistMongoose.Schema.Types.ObjectId;
+
+var wishList = new wishlistSchema
+                (
+                    {
+                        title: {type: String, default: "Useful Wish List"},
+                        products: [{type: ObjectId, ref: 'Product'}]
+                    }
+                );
+                g
+module.exports = wishlistMongoose.model('WishList', wishList);
