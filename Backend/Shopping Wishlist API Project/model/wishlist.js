@@ -6,8 +6,8 @@ var wishList = new wishlistSchema
                 (
                     {
                         title: {type: String, default: "Useful Wish List"},
-                        products: [{type: ObjectId, ref: 'Product'}]
+                        products: [{type: wishlistObjId, ref: 'Product'}]
                     }
                 );
-                g
+                
 module.exports = wishlistMongoose.model('WishList', wishList);
