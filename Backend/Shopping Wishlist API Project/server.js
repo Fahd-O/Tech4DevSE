@@ -86,21 +86,6 @@ serverApp.post
 
 serverApp.listen
 (
-    '/wishlist',
-    function(response, request)
-    {
-        if(err, newlyPostedWl)
-        {
-
-        }
-            else
-        {
-
-        }
-)
-
-serverApp.listen
-(
     3000,
     function()
     {
