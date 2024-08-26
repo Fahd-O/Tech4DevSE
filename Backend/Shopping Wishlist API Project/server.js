@@ -59,6 +59,31 @@ serverApp.get
     }
 );
 
+serverApp.post
+(
+    '/wishlist',
+    function(request, response)
+    {
+        var postWishlist = new WishList ();
+        postWishlist.title = request.body.title;
+
+        postWishlist.save
+        (
+            function(err, newPostedWl)
+            {
+                if(err)
+                {
+                    response.status(500).send({error: "Can not create Wishlist, something is broken somewhere, sorry about that"});
+                }
+                else
+                {
+                    response.send(newPostedWl);
+                }
+            }
+        );
+    }
+);
+
 serverApp.listen
 (
     3000,
