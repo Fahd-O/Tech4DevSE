@@ -15,7 +15,7 @@ serverApp.post
     '/product',
     function(request, response)
     {
-        var postOja = new serverOja();
+        var postOja = new serverOja(); //Getting an error here that "throw new MongooseError('Model.prototype.save() no longer accepts a callback');". This could be source of the problem, tutorial videos is stale.
         postOja.title = request.body.title;
         postOja.price = request.body.price;
         postOja.save(
@@ -27,62 +27,62 @@ serverApp.post
                             }
                             else
                             {
-                                response.send(savedProduct);
+                                response.status(200).send(savedProduct);
                             }
                         }
                     );
     }
 );
 
-serverApp.get
-(
-    '/products',
-    function(request, response)
-    {
-        product.find
-        (
-            {},
-            function(err, products)
-            {
-                if(err)
-                {
-                    response.status(500).send({error:"Could not fetch water from the well due to the traffic of the sunlight under the bucket"}); //this is supposed to be an error message but made it gibberish for fun and to be able to distinguish it and recognise it as my handwriting.
-                }
-                else
-                {
-                    response.send(products);
-                }
-            }
-        );
+// serverApp.get
+// (
+//     '/products',
+//     function(request, response)
+//     {
+//         product.find
+//         (
+//             {},
+//             function(err, products)
+//             {
+//                 if(err)
+//                 {
+//                     response.status(500).send({error:"Could not fetch water from the well due to the traffic of the sunlight under the bucket"}); //this is supposed to be an error message but made it gibberish for fun and to be able to distinguish it and recognise it as my handwriting.
+//                 }
+//                 else
+//                 {
+//                     response.send(products);
+//                 }
+//             }
+//         );
 
         
-    }
-);
+//     }
+// );
 
-serverApp.post
-(
-    '/wishlist',
-    function(request, response)
-    {
-        var postWishlist = new WishList ();
-        postWishlist.title = request.body.title;
+// serverApp.post
+// (
+//     '/wishlist',
+//     function(request, response)
+//     {
+//         var postWishlist = new WishList ();
+//         postWishlist.title = request.body.title;
 
-        postWishlist.save
-        (
-            function(err, newPostedWl)
-            {
-                if(err)
-                {
-                    response.status(500).send({error: "Can not create Wishlist, something is broken somewhere, sorry about that"});
-                }
-                else
-                {
-                    response.send(newPostedWl);
-                }
-            }
-        );
-    }
-);
+//         postWishlist.save
+//         (
+//             function(err, newPostedWl)
+//             {
+//                 if(err)
+//                 {
+//                     response.status(500).send({error: "Can not create Wishlist, something is broken somewhere, sorry about that"});
+//                 }
+//                 else
+//                 {
+//                     response.send(newPostedWl);
+//                 }
+//             }
+//         );
+//     }
+// );
 
 serverApp.listen
 (
