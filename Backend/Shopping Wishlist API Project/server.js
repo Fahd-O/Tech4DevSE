@@ -34,30 +34,32 @@ serverApp.post
     }
 );
 
-// serverApp.get
-// (
-//     '/products',
-//     function(request, response)
-//     {
-//         product.find
-//         (
-//             {},
-//             function(err, products)
-//             {
-//                 if(err)
-//                 {
-//                     response.status(500).send({error:"Could not fetch water from the well due to the traffic of the sunlight under the bucket"}); //this is supposed to be an error message but made it gibberish for fun and to be able to distinguish it and recognise it as my handwriting.
-//                 }
-//                 else
-//                 {
-//                     response.send(products);
-//                 }
-//             }
-//         );
+serverApp.get
+(
+    '/product',
+    function(request, response)
+    {
+        product.find
+        (
+            {},
+            function(err, products)
+            {
+                if(err)
+                {
+                    response.status(500).send({error:"Could not fetch water from the well due to the traffic of the sunlight under the bucket"}); //this is supposed to be an error message but made it gibberish for fun and to be able to distinguish it and recognise it as my handwriting.
+                }
+                else
+                {
+                    response.send(products);
+                }
+            }
+        );
 
         
-//     }
-// );
+    }
+);
+
+
 
 // serverApp.post
 // (
