@@ -39,7 +39,7 @@ serverApp.get
     '/product',
     function(request, response)
     {
-        product.find
+        serverOja.find
         (
             {},
             function(err, products)
