@@ -79,7 +79,7 @@ serverApp.post
                 }
                 else
                 {
-                    response.send(newPostedWl);
+                    response.send(newPostedWl); //Debugging checkpoint
                 }
             }
         );
