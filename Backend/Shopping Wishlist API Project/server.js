@@ -59,8 +59,6 @@ serverApp.get
     }
 );
 
-
-
 serverApp.post
 (
     '/wishlist',
@@ -83,6 +81,29 @@ serverApp.post
                 }
             }
         );
+    }
+);
+
+serverApp.put
+(
+    'wishlist/product/add',
+    function(request, response)
+    {
+        serverOja.findOne
+        (
+            {_id: request.body.productId},
+            function(err, product)
+            {
+                if(err)
+                {
+                    response.status(500).send({error:"Could not add item to wishlist, you read ?"})
+                }
+                else
+                {
+                    WishList.update
+                }
+            }
+        )
     }
 );
 
