@@ -36,26 +36,20 @@ serverApp.post
 
 serverApp.get
 (
-    '/product',
+    '/wishlist',
     function(request, response)
     {
-        serverOja.find
-        (
-            {},
-            function(err, products)
+        serverOja.find({}).populate({path:'products', model:'Oja'}).exec(function(err, wishLists)
+        {
+            if(err)
             {
-                if(err)
-                {
-                    response.status(500).send({error:"Could not fetch water from the well due to the traffic of the sunlight under the bucket"}); //this is supposed to be an error message but made it gibberish for fun and to be able to distinguish it and recognise it as my handwriting.
-                }
-                else
-                {
-                    response.send(products);
-                }
+                response.status(500).send({error:"Could not fetch water from the well due to the traffic of the sunlight under the bucket"});
             }
-        );
-
-        
+            else
+            {
+                response.status(200).send(wishLists);
+            }
+        });   
     }
 );
 
@@ -86,7 +80,7 @@ serverApp.post
 
 serverApp.put
 (
-    'wishlist/product/add',
+    '/wishlist/product/add',
     function(request, response)
     {
         serverOja.findOne
@@ -96,11 +90,32 @@ serverApp.put
             {
                 if(err)
                 {
-                    response.status(500).send({error:"Could not add item to wishlist, you read ?"})
+                    response.status(500).send
+                    (
+                        {error:"Could not add item to wishlist, you read ?"}
+                    );
                 }
                 else
                 {
                     WishList.update
+                    (
+                        {_id:request.body.wishListId}, 
+                        {$addToSet:{products: product._id}}, 
+                        function(err, wishList)
+                        {
+                            if(err)
+                            {
+                                response.status(500).send
+                                (
+                                    {error:"Could not add item to wishlist, you copy ?"}
+                                );
+                            }
+                            else
+                            {
+                                response.send(wishList);
+                            }
+                        }
+                    );
                 }
             }
         )
