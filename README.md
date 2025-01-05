@@ -41,7 +41,7 @@ The course included six modules covering foundational and advanced topics in sof
 
 The repository is organized into separate folders for each module, named descriptively for clarity. Each folder contains the associated files and projects. Below is an outline:
 
-```bash
+```plaintext
 Tech4DevSE/
 |
 ├── Module-1-Git/
